@@ -210,5 +210,3 @@ void SelectiveGetFromGcVictimList(unsigned int dieNo, unsigned int blockNo)
 		gcVictimMapPtr->gcVictimList[dieNo][invalidSliceCnt].tailBlock = BLOCK_NONE;
 	}
 }
-
-s

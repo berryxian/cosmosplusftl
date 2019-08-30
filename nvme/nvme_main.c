@@ -67,10 +67,11 @@
 #include "nvme_io_cmd.h"
 
 #include "../memory_map.h"
+#include "../ftl_config.h"
 
 volatile NVME_CONTEXT g_nvmeTask;
 
-void initNvmeReg() {
+void InitNvmeReg() {
     g_nvmeTask.status = NVME_TASK_IDLE;
 	g_nvmeTask.cacheEn = 0;
 
@@ -85,10 +86,10 @@ void initNvmeReg() {
 void nvme_main()
 {
 	unsigned int exeLlr;
-	initNvmeReg();
+	InitNvmeReg();
 
 	xil_printf("!!! Wait until FTL reset complete !!! \r\n");
-    initFTL();
+    InitFTL();
 	xil_printf("\r\nFTL reset complete!!! \r\n");
 	xil_printf("Turn on the host PC \r\n");
 

@@ -268,7 +268,7 @@ void SchedulingNandReqPerCh(unsigned int chNo)
 			if (wayPriorityTablePtr->wayPriority[chNo].eraseHead != WAY_NONE)
 			{
 				wayNo = wayPriorityTablePtr->wayPriority[chNo].eraseHead;
-				LowLevelListHandler(chNo, wayNo, ExecuteNandReq);
+				LowLevelListHandler(chNo, wayNo, SelectiveGetFromNandEraseList);
 			}
 			if (wayPriorityTablePtr->wayPriority[chNo].writeHead != WAY_NONE)
 			{
